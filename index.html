@@ -13,93 +13,125 @@
             line-height: 1.6;
             color: #333;
         }
+
         h1, h2, h3 {
             margin: 0;
         }
+
         a {
             text-decoration: none;
+            color: inherit;
         }
-        /* Hero Section */
+
+        /* Header / Hero Section */
         .hero {
             background: linear-gradient(to right, #0047AB, #0084FF);
             color: white;
             text-align: center;
-            padding: 60px 20px;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
         }
+
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
+            animation: fadeInDown 1.5s ease;
         }
+
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin-bottom: 30px;
         }
-        .hero .cta-buttons a {
+
+        .cta-buttons a {
             color: white;
             background: #FF6F00;
-            padding: 15px 30px;
+            padding: 15px 40px;
             margin: 10px;
-            border-radius: 5px;
+            border-radius: 30px;
             font-weight: bold;
-            transition: background 0.3s ease;
+            font-size: 1rem;
+            transition: all 0.3s ease-in-out;
         }
-        .hero .cta-buttons a:hover {
+
+        .cta-buttons a:hover {
             background: #FF8C42;
+            transform: scale(1.1);
         }
+
         /* Section Styles */
         section {
-            padding: 40px 20px;
+            padding: 60px 20px;
             max-width: 1200px;
             margin: auto;
         }
+
         section h2 {
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.2rem;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
             color: #0047AB;
         }
-        .about, .services, .events, .contact {
-            background: #f9f9f9;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+
         /* About Section */
         .about p {
             text-align: center;
             font-size: 1.2rem;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
+
         .about ul {
             display: flex;
             justify-content: center;
             list-style: none;
-            padding: 0;
+            gap: 15px;
+            flex-wrap: wrap;
         }
+
         .about ul li {
             background: #0047AB;
             color: white;
-            margin: 10px;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 1.1rem;
         }
+
         /* Services Section */
         .services .service {
-            margin-bottom: 20px;
             text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
         }
+
+        .services .service:hover {
+            transform: scale(1.05);
+        }
+
+        .services .service h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #0047AB;
+        }
+
         /* Events Section */
         .events ul {
             list-style: none;
             padding: 0;
         }
+
         .events ul li {
             background: #e8f0fe;
-            margin: 10px 0;
-            padding: 10px 20px;
+            margin: 15px 0;
+            padding: 20px;
             border-left: 5px solid #0047AB;
-            border-radius: 5px;
+            border-radius: 10px;
         }
+
         /* Contact Section */
         .contact form {
             display: flex;
@@ -107,17 +139,25 @@
             max-width: 600px;
             margin: auto;
         }
+
         .contact form label {
             margin-bottom: 5px;
             font-weight: bold;
         }
+
         .contact form input, .contact form textarea {
             margin-bottom: 15px;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1rem;
+            transition: border 0.3s;
         }
+
+        .contact form input:focus, .contact form textarea:focus {
+            border-color: #0047AB;
+        }
+
         .contact form button {
             background: #0047AB;
             color: white;
@@ -126,25 +166,42 @@
             border-radius: 5px;
             font-size: 1.1rem;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
+
         .contact form button:hover {
             background: #003380;
+            transform: scale(1.05);
         }
+
         .social-links a {
             margin: 0 10px;
-            color: #0047AB;
             font-weight: bold;
         }
+
         .social-links a:hover {
             text-decoration: underline;
+            color: #0047AB;
         }
+
         /* Footer */
         .footer {
             text-align: center;
             background: #333;
             color: white;
             padding: 20px;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -153,8 +210,8 @@
         <h1>Empowering Students. Transforming Public Institutions.</h1>
         <p>Providing strategic consulting solutions to public institutions while equipping students with real-world skills.</p>
         <div class="cta-buttons">
-            <a href="#join">Join Us</a>
-            <a href="#partner">Partner with Us</a>
+            <a href="#about">Join Us</a>
+            <a href="#services">Partner with Us</a>
         </div>
     </header>
 
