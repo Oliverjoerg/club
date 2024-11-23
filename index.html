@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Consulting Club</title>
     <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
         /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
             color: #333;
+            background: #f5f5f5;
         }
 
         h1, h2, h3 {
@@ -21,11 +25,16 @@
         a {
             text-decoration: none;
             color: inherit;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #FF6F00;
         }
 
         /* Header / Hero Section */
         .hero {
-            background: linear-gradient(to right, #0047AB, #0084FF);
+            background: linear-gradient(120deg, #6a11cb, #2575fc);
             color: white;
             text-align: center;
             padding: 100px 20px;
@@ -36,99 +45,125 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            animation: fadeInDown 1.5s ease;
+            animation: fadeIn 2s ease;
         }
 
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 30px;
+            animation: fadeIn 2s ease 0.5s;
         }
 
         .cta-buttons a {
             color: white;
-            background: #FF6F00;
+            background: #ff6f00;
             padding: 15px 40px;
             margin: 10px;
             border-radius: 30px;
             font-weight: bold;
             font-size: 1rem;
-            transition: all 0.3s ease-in-out;
+            transition: transform 0.3s, background 0.3s;
         }
 
         .cta-buttons a:hover {
-            background: #FF8C42;
+            background: #ff9042;
             transform: scale(1.1);
         }
 
         /* Section Styles */
         section {
-            padding: 60px 20px;
+            padding: 80px 20px;
             max-width: 1200px;
             margin: auto;
+            text-align: center;
         }
 
         section h2 {
-            text-align: center;
-            margin-bottom: 40px;
             font-size: 2.5rem;
-            color: #0047AB;
+            margin-bottom: 40px;
+            color: #2575fc;
+            position: relative;
+            display: inline-block;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #ff6f00;
+            margin: 10px auto;
+            border-radius: 10px;
         }
 
         /* About Section */
         .about p {
-            text-align: center;
             font-size: 1.2rem;
             margin-bottom: 40px;
+            max-width: 800px;
+            margin: 0 auto 40px;
         }
 
         .about ul {
             display: flex;
             justify-content: center;
             list-style: none;
-            gap: 15px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
         .about ul li {
-            background: #0047AB;
+            background: #6a11cb;
             color: white;
             padding: 15px 25px;
             border-radius: 30px;
             font-size: 1.1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Services Section */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
         .services .service {
+            flex: 1 1 300px;
+            max-width: 300px;
             text-align: center;
-            margin-bottom: 30px;
             padding: 20px;
             border-radius: 10px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            background-color: white;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .services .service:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .services .service h3 {
             margin-bottom: 15px;
             font-size: 1.5rem;
-            color: #0047AB;
+            color: #2575fc;
         }
 
         /* Events Section */
         .events ul {
             list-style: none;
             padding: 0;
+            max-width: 800px;
+            margin: auto;
         }
 
         .events ul li {
             background: #e8f0fe;
             margin: 15px 0;
             padding: 20px;
-            border-left: 5px solid #0047AB;
+            border-left: 5px solid #2575fc;
             border-radius: 10px;
         }
 
@@ -148,25 +183,25 @@
         .contact form input, .contact form textarea {
             margin-bottom: 15px;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
             transition: border 0.3s;
         }
 
         .contact form input:focus, .contact form textarea:focus {
-            border-color: #0047AB;
+            border-color: #2575fc;
         }
 
         .contact form button {
-            background: #0047AB;
+            background: #2575fc;
             color: white;
             border: none;
             padding: 10px;
             border-radius: 5px;
             font-size: 1.1rem;
             cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
+            transition: background 0.3s, transform 0.3s;
         }
 
         .contact form button:hover {
@@ -177,11 +212,12 @@
         .social-links a {
             margin: 0 10px;
             font-weight: bold;
+            font-size: 1.2rem;
         }
 
         .social-links a:hover {
             text-decoration: underline;
-            color: #0047AB;
+            color: #ff6f00;
         }
 
         /* Footer */
@@ -192,11 +228,11 @@
             padding: 20px;
         }
 
-        /* Keyframe Animations */
-        @keyframes fadeInDown {
+        /* Animations */
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(-30px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
