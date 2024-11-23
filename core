@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Consulting Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Empowering Students. Transforming Public Institutions.</h1>
+        <p>Providing strategic consulting solutions to public institutions while equipping students with real-world skills.</p>
+        <div class="cta-buttons">
+            <a href="#join">Join Us</a>
+            <a href="#partner">Partner with Us</a>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We aim to provide affordable consulting services to public institutions while fostering practical learning experiences for students.</p>
+        <div class="values">
+            <h3>Our Values</h3>
+            <ul>
+                <li>Collaboration</li>
+                <li>Innovation</li>
+                <li>Impact</li>
+                <li>Interdisciplinary Learning</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>What We Do</h2>
+        <div class="service">
+            <h3>Consulting Projects</h3>
+            <p>We work with public institutions to address their challenges and provide strategic solutions.</p>
+        </div>
+        <div class="service">
+            <h3>Workshops & Training</h3>
+            <p>We organize sessions on consulting fundamentals and public sector challenges.</p>
+        </div>
+        <div class="service">
+            <h3>Networking Opportunities</h3>
+            <p>Connect with public sector professionals and consulting industry leaders.</p>
+        </div>
+    </section>
+
+    <section id="events" class="events">
+        <h2>Events</h2>
+        <ul>
+            <li>Consulting Skills Workshop – December 5, 2024</li>
+            <li>Public Sector Networking Night – January 10, 2025</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Student Consulting Club | Privacy Policy | Terms of Use</p>
+    </footer>
+</body>
+</html>
